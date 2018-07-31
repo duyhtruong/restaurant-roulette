@@ -19,7 +19,17 @@
 */
   	})
  }
+/*
+document.getElementById('priceid').addEventListener("click", function(){
+	if(document.getElementById('priceid').classList.contains('active')) {
+		document.getElementById('priceid').classList.remove('active')
+	}
+	else{
+		document.getElementById('priceid').classList.add('active')
+	}
 
+})
+*/
 document.getElementById('go').addEventListener("click", initMap);
 
 //var map;
@@ -39,8 +49,18 @@ function initMap() {
 
 //	infowindow = new google.maps.InfoWindow();
 
+		var infowindow;
+  		infowindow = new google.maps.InfoWindow();
+  		
+
+  		infowindow.setPosition(pyrmont);
+ 		infowindow.setContent('You are here');
+ 		infowindow.open(map);
+  		map.setCenter(pyrmont);
+
+
   	locationObj = new google.maps.LatLng({lat: latt, lng: longg});
-  	alert(locationObj);
+  	
   	/*request = {
 		location: locationObj, 
 		radius: 500,
@@ -56,11 +76,47 @@ function initMap() {
 		}, callback);
   	
   	
+      function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+
+
+
+
+  	
 	function callback(results, status){
 		if(status === google.maps.places.PlacesServiceStatus.OK) {
 			
 			var resultList = [];
 			
+			var listRandom = [];
+			for(var j=0;j<4;j++){
+				var randomNum = Math.floor(Math.random()* (results.length - 0 + 1)) + 0;
+				listRandom.push(randomNum);
+			}
+		
+
+			for(var i = 0;i<listRandom.length;i++){
+				createMarker(results[listRandom[i]])
+				var html = '<div class="card">';
+				html += '<div class="restName">' + results[listRandom[i]].name + '</div>'+ '<br>';
+				html += 'Rating: ' + results[listRandom[i]].rating + ' / 5.0' + '<br>' + '<br>';
+				html += results[listRandom[i]].vicinity + '</div>';
+				
+				resultList += '<div class="container">' + html + '</div>' + '<br>';
+				document.getElementById('test').innerHTML = resultList;
+			
+			}
+/*
 			for (var i=0;i<4;i++) {
 				var html = '<div class="card">';
 				html += '<div class="restName">' + results[i].name + '</div>'+ '<br>';
@@ -71,7 +127,7 @@ function initMap() {
 				document.getElementById('test').innerHTML = resultList;
 				document.getElementById('pricecheck').innerHTML = priceChoice;
 				document.getElementById('distancecheck').innerHTML = distanceChoice;
-			}
+			}*/
 			//document.getElementById('test').innerHTML = JSON.stringify(results[0].name);
 		}
 		else{
@@ -92,7 +148,14 @@ function setDistance(distantpoint){
 	distanceChoice = distantpoint;
 }
 
-
+function activeColor(activate){
+	if (document.getElementById(activate).classList.contains('active')){
+		document.getElementById(activate).classList.remove('active')
+	}
+	else{
+		document.getElementById(activate).classList.add('active')
+	}
+}
 
 
 

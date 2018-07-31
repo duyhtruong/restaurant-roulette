@@ -18,27 +18,22 @@
 <body>
 	
 	<div class='price'>
-		<button value="0" onclick="setPrice(0)">$</button>
-		<button value="1" onclick="setPrice(1)">$$</button>
-		<button value="2" onclick="setPrice(2)">$$$</button>
-		<button value="3" onclick="setPrice(3)">$$$$</button>
-		<button value="4" onclick="setPrice(4)">$$$$$</button>
+		<button value="0" id='0' onclick="setPrice(0), activeColor(0)">$</button>
+		<button value="1" id='1' onclick="setPrice(1), activeColor(1)">$$</button>
+		<button value="2" id='2' onclick="setPrice(2), activeColor(2)">$$$</button>
+		<button value="3" id='3' onclick="setPrice(3), activeColor(3)">$$$$</button>
+		<button value="4" id='4' onclick="setPrice(4), activeColor(4)">$$$$$</button>
 		
 	</div>
 
 	
 	<div class='distance'>
-		<button value="5" onclick="setDistance(8000)">5miles</button>
-		<button value="10" onclick="setDistance(16000)">10miles</button>
-		<button value="15" onclick="setDistance(24000)">15miles</button>
+		<button value="5" id='5' onclick="setDistance(8000), activeColor(5)">5miles</button>
+		<button value="10" id='10' onclick="setDistance(16000), activeColor(10)">10miles</button>
+		<button value="15" id='15' onclick="setDistance(24000), activeColor(15)">15miles</button>
 	</div>
 
-	<div id='pricecheck'>
-		price
-	</div>
-	<div id='distancecheck'>
-		distance
-	</div>
+
 
 	<div class='number'>
 		number
@@ -55,7 +50,7 @@
 	</div>
 
 	<div id='test'>
-		test
+		
 	</div>
 
 
