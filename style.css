@@ -1,0 +1,61 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 18em;
+  width: 100%;
+  margin-bottom: 1em;
+  
+}
+
+body{
+	background-color: #c0392b;
+	font-family: 'helvetica', arial;
+	
+}
+
+h1{
+	color: #ecf0f1;
+	text-align: center;
+}
+
+.one {
+	padding-left: 0em;
+}
+
+.container{
+	width: 100%;
+}
+.card {
+	background-color: #ecf0f1;
+	padding: 1em 1em 1em 1em;
+	border-radius: 0.5em;
+	
+}
+
+button{
+	background-color: #ecf0f1;
+}
+
+.price {
+	text-align: center;
+
+}
+
+button:focus{
+	background-color: yellow;
+}
+
+.distance {
+	text-align: center;
+}
+
+#go{
+	background-color: #ecf0f1;
+	margin-bottom: 1em;
+	text-align: center;
+
+}
+
+.restName {
+	font-size: 2em;
+}

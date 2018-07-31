@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Restaurant Roulette</title>
+	<meta charset='utf-8'>
+	<meta name="author" content="Duy H Truong">
+	<meta name="viewport" content="width=device-width">
+</head>
+
+<header>
+	<h1 id='title'>Restaurant Roulette</h1>
+</header>
+
+
+<body>
+	
+	<div class='price'>
+		<button value="0" onclick="setPrice(0)">$</button>
+		<button value="1" onclick="setPrice(1)">$$</button>
+		<button value="2" onclick="setPrice(2)">$$$</button>
+		<button value="3" onclick="setPrice(3)">$$$$</button>
+		<button value="4" onclick="setPrice(4)">$$$$$</button>
+		
+	</div>
+
+	
+	<div class='distance'>
+		<button value="5" onclick="setDistance(8000)">5miles</button>
+		<button value="10" onclick="setDistance(16000)">10miles</button>
+		<button value="15" onclick="setDistance(24000)">15miles</button>
+	</div>
+
+	<div id='pricecheck'>
+		price
+	</div>
+	<div id='distancecheck'>
+		distance
+	</div>
+
+	<div class='number'>
+		number
+	</div>
+	
+	<div id='go'>
+		<form>
+			<input type='button' value='GO'>
+		</form>
+	</div>
+
+	<div class='one'>
+		<div id="map"></div>
+	</div>
+
+	<div id='test'>
+		test
+	</div>
+
+
+
+
+
+
+
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src='script.js'></script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXe1FARSg1LyQzwqMVtLKZJlm71DFEtcw&libraries=places" async defer>
+</script>
+
+</body>
+
+</html>
+
