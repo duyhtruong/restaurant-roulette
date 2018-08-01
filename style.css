@@ -9,7 +9,7 @@
 }
 
 body{
-	background-color: #c0392b;
+	background-color: #ea8685;
 	font-family: 'helvetica', arial;
 	
 }
@@ -17,6 +17,9 @@ body{
 h1{
 	color: #ecf0f1;
 	text-align: center;
+	font-size: 3em;
+	margin-bottom: 0.5em;
+
 }
 
 .one {
@@ -28,27 +31,48 @@ h1{
 }
 .card {
 	background-color: #ecf0f1;
-	padding: 1em 1em 1em 1em;
+	padding: 2em 2em 2em 2em;
 	border-radius: 0.5em;
 	box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
 }
 
 button{
 	background-color: #ecf0f1;
+	font-family: 'helvetica', arial;
+	border: 1;
+	width: 100%;
+	font-size: 0.6em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	
 }
 
 .price {
-	text-align: center;
-
+	display: flex;
+	flex-direction: horizontal;
+	justify-content: center;
 }
 
+.price button {
+	padding-left: 1.2em;
+	padding-right: 1.2em;
+	margin-bottom: 0.3em;
+}
 
 .active{
 	background-color: #95a5a6;
 }
 
 .distance {
-	text-align: center;
+	display: flex;
+	flex-direction: horizontal;
+	justify-content: center;
+}
+
+.distance button {
+	padding-left: 0.9em;
+	padding-right: 0.9em;
+	margin-bottom: 0.3em;
 }
 
 #go{
@@ -59,5 +83,32 @@ button{
 }
 
 .restName {
-	font-size: 2em;
+	font-size: 1.9em;
+	color: #e66767;
+}
+
+.number {
+	display: flex;
+	flex-direction: horizontal;
+	justify-content: center;
+}
+
+.number button {
+	margin-bottom: 0.3em;
+}
+
+.address {
+	color:#ea8685;
+	font-weight: bold;
+
+}
+
+.rating {
+	line-height: 3em;
+	color: #ea8685;
+}
+
+.type {
+	font-style: italic;
+	color: #ea8685;
 }
