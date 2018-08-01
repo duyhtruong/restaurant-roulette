@@ -1,30 +1,32 @@
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
 #map {
   height: 18em;
   width: 100%;
   margin-bottom: 1em;
-
-  
-}
+ }
 
 body{
 	background-color: #ea8685;
-	font-family: 'helvetica', arial;
-	
+	font-family: 'helvetica', arial;	
+}
+
+header{
+	text-align: center;
+	padding: 2.5em 0 2.5em 0;
+}
+
+img{
+	height: 100px;
+	width: auto;
 }
 
 h1{
 	color: #ecf0f1;
 	text-align: center;
-	font-size: 3em;
+	font-size: 2.8em;
 	margin-bottom: 0.5em;
-
 }
 
-.one {
-	padding-left: 0em;
-}
+
 
 .container{
 	width: 100%;
@@ -32,8 +34,9 @@ h1{
 .card {
 	background-color: #ecf0f1;
 	padding: 2em 2em 2em 2em;
-	border-radius: 0.5em;
+	border-radius: 0em;
 	box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+	margin-bottom: 0.5em;
 }
 
 button{
@@ -80,11 +83,12 @@ button{
 	margin-bottom: 1em;
 	text-align: center;
 
+
 }
 
 .restName {
 	font-size: 1.9em;
-	color: #e66767;
+	color: #333333;
 }
 
 .number {
@@ -98,17 +102,27 @@ button{
 }
 
 .address {
-	color:#ea8685;
+	color:#333333;
 	font-weight: bold;
 
 }
 
 .rating {
 	line-height: 3em;
-	color: #ea8685;
+	color: #333333;
 }
 
 .type {
 	font-style: italic;
-	color: #ea8685;
+	color: #333333;
 }
+
+
+@media (min-width:1025px) {
+
+	body{
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	}
