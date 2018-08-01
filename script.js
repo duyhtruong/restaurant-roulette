@@ -122,7 +122,7 @@ function initMap() {
 				html += '<div class="type">' + toCapitalize(results[listRandom[i]].types[0]) + ', ' + toCapitalize(results[listRandom[i]].types[1]) + '</div>';
 				html += '<div class="address">' + results[listRandom[i]].vicinity + '</div>' + '</div>';
 				
-				resultList += '<div class="container">' + html + '</div>' + '<br>';
+				resultList += '<div class="container">' + html + '</div>';
 				document.getElementById('test').innerHTML = resultList;
 			
 			}
