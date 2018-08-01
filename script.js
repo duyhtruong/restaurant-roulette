@@ -44,7 +44,7 @@ function initMap() {
 	var pyrmont = {lat: latt, lng: longg};
 	map = new google.maps.Map(document.getElementById('map'), {
     	center: pyrmont,
-    	zoom: 15
+    	zoom: 10
   		});
 
 //	infowindow = new google.maps.InfoWindow();
@@ -71,8 +71,9 @@ function initMap() {
   	service.nearbySearch({
 		location: locationObj, 
 		radius: distanceChoice,
-		type: ['restaurant'],
-		minPriceLevel: priceChoice
+		keyword: 'restaurant',
+		minPriceLevel: priceChoice,
+		maxPriceLevel: priceChoice
 		}, callback);
   	
   	
@@ -92,27 +93,36 @@ function initMap() {
 
 
 
-  	
+
 	function callback(results, status){
 		if(status === google.maps.places.PlacesServiceStatus.OK) {
 			
 			var resultList = [];
 			
+			
 			var listRandom = [];
-			for(var j=0;j<4;j++){
+			for(var j=0;j<numberChoice;j++){
 				var randomNum = Math.floor(Math.random()* (results.length - 0 + 1)) + 0;
-				listRandom.push(randomNum);
+				if (listRandom.includes(randomNum)){
+					j -= 1;
+				}
+				else{
+					listRandom.push(randomNum);
+				}
+				
 			}
 		
 
 			for(var i = 0;i<listRandom.length;i++){
 				createMarker(results[listRandom[i]])
+				
 				var html = '<div class="card">';
 				html += '<div class="restName">' + results[listRandom[i]].name + '</div>'+ '<br>';
-				html += 'Rating: ' + results[listRandom[i]].rating + ' / 5.0' + '<br>' + '<br>';
-				html += results[listRandom[i]].vicinity + '</div>';
+				html += '<div class="rating">' +'Rating: ' + results[listRandom[i]].rating + ' / 5.0' + '</div>';
+				html += '<div class="type">' + toCapitalize(results[listRandom[i]].types[0]) + ', ' + toCapitalize(results[listRandom[i]].types[1]) + '</div>';
+				html += '<div class="address">' + results[listRandom[i]].vicinity + '</div>' + '</div>';
 				
-				resultList += '<div class="container">' + html + '</div>' + '<br>';
+				resultList += '<div class="container">' + html + '</div>';
 				document.getElementById('test').innerHTML = resultList;
 			
 			}
@@ -155,6 +165,15 @@ function activeColor(activate){
 	else{
 		document.getElementById(activate).classList.add('active')
 	}
+}
+
+var numberChoice;
+function setNumber(numberpoint){
+	numberChoice = numberpoint;
+}
+
+function toCapitalize(word){
+	return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 

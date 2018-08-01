@@ -11,18 +11,17 @@
 </head>
 
 <header>
-	<h1 id='title'>Restaurant Roulette</h1>
+	<img src='logo.png'>
 </header>
 
 
 <body>
 	
 	<div class='price'>
-		<button value="0" id='0' onclick="setPrice(0), activeColor(0)">$</button>
-		<button value="1" id='1' onclick="setPrice(1), activeColor(1)">$$</button>
-		<button value="2" id='2' onclick="setPrice(2), activeColor(2)">$$$</button>
-		<button value="3" id='3' onclick="setPrice(3), activeColor(3)">$$$$</button>
-		<button value="4" id='4' onclick="setPrice(4), activeColor(4)">$$$$$</button>
+		<button value="1" id='1' onclick="setPrice(1), activeColor(1)">$</button>
+		<button value="2" id='2' onclick="setPrice(2), activeColor(2)">$$</button>
+		<button value="3" id='3' onclick="setPrice(3), activeColor(3)">$$$</button>
+		<button value="4" id='4' onclick="setPrice(4), activeColor(4)">$$$$</button>
 		
 	</div>
 
@@ -36,7 +35,9 @@
 
 
 	<div class='number'>
-		number
+		<button value='two' id='two' onclick="setNumber(2), activeColor('two')">2 results</button>
+		<button value='four' id='four' onclick="setNumber(4), activeColor('four')">4 results</button>
+		<button value='six' id='six' onclick="setNumber(6), activeColor('six')">6 results</button>
 	</div>
 	
 	<div id='go'>

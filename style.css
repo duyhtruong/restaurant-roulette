@@ -1,54 +1,81 @@
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
 #map {
   height: 18em;
   width: 100%;
   margin-bottom: 1em;
-  box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
-  
-}
+ }
 
 body{
-	background-color: #c0392b;
-	font-family: 'helvetica', arial;
-	
+	background-color: #ea8685;
+	font-family: 'helvetica', arial;	
+}
+
+header{
+	text-align: center;
+	padding: 2.5em 0 2.5em 0;
+}
+
+img{
+	height: 100px;
+	width: auto;
 }
 
 h1{
 	color: #ecf0f1;
 	text-align: center;
+	font-size: 2.8em;
+	margin-bottom: 0.5em;
 }
 
-.one {
-	padding-left: 0em;
-}
+
 
 .container{
 	width: 100%;
 }
 .card {
 	background-color: #ecf0f1;
-	padding: 1em 1em 1em 1em;
-	border-radius: 0.5em;
+	padding: 2em 2em 2em 2em;
+	border-radius: 0em;
 	box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+	margin-bottom: 0.5em;
 }
 
 button{
 	background-color: #ecf0f1;
+	font-family: 'helvetica', arial;
+	border: 1;
+	width: 100%;
+	font-size: 0.6em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	
 }
 
 .price {
-	text-align: center;
-
+	display: flex;
+	flex-direction: horizontal;
+	justify-content: center;
 }
 
+.price button {
+	padding-left: 1.2em;
+	padding-right: 1.2em;
+	margin-bottom: 0.3em;
+}
 
 .active{
 	background-color: #95a5a6;
 }
 
 .distance {
-	text-align: center;
+	display: flex;
+	flex-direction: horizontal;
+	justify-content: center;
+}
+
+.distance button {
+	padding-left: 0.9em;
+	padding-right: 0.9em;
+	margin-bottom: 0.3em;
 }
 
 #go{
@@ -56,8 +83,46 @@ button{
 	margin-bottom: 1em;
 	text-align: center;
 
+
 }
 
 .restName {
-	font-size: 2em;
+	font-size: 1.9em;
+	color: #333333;
 }
+
+.number {
+	display: flex;
+	flex-direction: horizontal;
+	justify-content: center;
+}
+
+.number button {
+	margin-bottom: 0.3em;
+}
+
+.address {
+	color:#333333;
+	font-weight: bold;
+
+}
+
+.rating {
+	line-height: 3em;
+	color: #333333;
+}
+
+.type {
+	font-style: italic;
+	color: #333333;
+}
+
+
+@media (min-width:1025px) {
+
+	body{
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	}
