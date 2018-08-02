@@ -1,5 +1,5 @@
 #map {
-  height: 18em;
+  height: 15em;
   width: 100%;
   margin-bottom: 1em;
  }
@@ -116,6 +116,48 @@ button{
 	font-style: italic;
 	color: #333333;
 }
+
+
+.star-rating, .back-stars, .front-stars {
+  display: flex;
+ 
+}
+.star-rating {
+  
+  font-size: 1.5em;
+  justify-content: flex-start;
+ 
+}
+.back-stars {
+  color: #bb5252;
+  position: relative;
+  text-shadow: 1px 1px 2px #ea8685;
+}
+.front-stars {
+  color: #ffbc0b;
+  overflow: hidden;
+  position: absolute;
+  text-shadow: 0.5px 0.5px 1px #d29b09;
+  top: 0;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.3s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 
 
 @media (min-width:1025px) {

@@ -125,9 +125,33 @@ function initMap() {
 			//placing results in cards
 			for(var i = 0;i<listRandom.length;i++){
 				createMarker(results[listRandom[i]])
-				var html = '<div class="card">';
-					html += '<div class="restName">' + results[listRandom[i]].name + '</div>'+ '<br>';
-					html += '<div class="rating">' +'Rating: ' + results[listRandom[i]].rating + ' / 5.0' + '</div>';
+				var html = '<div class="card fade-in">';
+					html += '<div class="restName">' + results[listRandom[i]].name + '</div>';
+					
+					//star rating based on percentage
+					var ratingNum = (results[listRandom[i]].rating / 5) * 100;
+					
+					html += '<div class="star-rating">';
+					html += '<div class="back-stars">';
+					html +=	'<i class="fa fa-star" aria-hidden="true"></i>' +
+								'<i class="fa fa-star" aria-hidden="true"></i>' + 
+								'<i class="fa fa-star" aria-hidden="true"></i>' + 
+								'<i class="fa fa-star" aria-hidden="true"></i>' +
+								'<i class="fa fa-star" aria-hidden="true"></i>';
+					html += '<div class="front-stars" style="width: ' + ratingNum +'%' + '">';
+					html += '<i class="fa fa-star" aria-hidden="true"></i>' +
+								'<i class="fa fa-star" aria-hidden="true"></i>' +
+								'<i class="fa fa-star" aria-hidden="true"></i>' +
+								'<i class="fa fa-star" aria-hidden="true"></i>' +
+								'<i class="fa fa-star" aria-hidden="true"></i>';
+					html += '</div>' + '</div>' + '</div>' + '<br>';
+
+
+
+
+
+
+
 					html += '<div class="type">' + toCapitalize(results[listRandom[i]].types[0]) + ', ' 
 							+ toCapitalize(results[listRandom[i]].types[1]) + '</div>';
 
