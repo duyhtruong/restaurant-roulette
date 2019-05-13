@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>	
+	<link rel="stylesheet" href="style.css">
+	<title>Restaurant Roulette</title>
+	<meta charset='utf-8'>
+	<meta name="author" content="Duy H Truong">
+	<meta name="viewport" content="width=device-width">
+
+</head>
+
+<header>
+	<img src='logo.png'>
+</header>
+
+
+<body>
+	
+	<div class='price'>
+		<button value="1" id='1' onclick="setPrice(1), activeColor(1)">$</button>
+		<button value="2" id='2' onclick="setPrice(2), activeColor(2)">$$</button>
+		<button value="3" id='3' onclick="setPrice(3), activeColor(3)">$$$</button>
+		<button value="4" id='4' onclick="setPrice(4), activeColor(4)">$$$$</button>
+		
+	</div>
+
+	
+	<div class='distance'>
+		<button value="5" id='5' onclick="setDistance(8000), activeColor(5)">5miles</button>
+		<button value="10" id='10' onclick="setDistance(16000), activeColor(10)">10miles</button>
+		<button value="15" id='15' onclick="setDistance(24000), activeColor(15)">15miles</button>
+	</div>
+
+
+
+	<div class='number'>
+		<button value='two' id='two' onclick="setNumber(2), activeColor('two')">2 results</button>
+		<button value='four' id='four' onclick="setNumber(4), activeColor('four')">4 results</button>
+		<button value='six' id='six' onclick="setNumber(6), activeColor('six')">6 results</button>
+	</div>
+	
+	<div id='go'>
+		<form>
+			<input type='button' value='GO'>
+		</form>
+	</div>
+
+
+
+	<div class='one'>
+		<div id="map"></div>
+	</div>
+
+	<div id='test'>
+		
+	</div>
+	<script src='https://use.fontawesome.com/f4e64b7c17.js'></script>
+	<script src='script.js'></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXe1FARSg1LyQzwqMVtLKZJlm71DFEtcw&libraries=places" async defer>
+	</script>
+
+</body>
+</html>
+
